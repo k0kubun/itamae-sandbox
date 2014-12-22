@@ -1,1 +1,1 @@
-execute 'echo hello world'
+# no shared configuration

@@ -2,3 +2,30 @@ roles:
   - conoha
   - sakura
   - excloud
+
+conoha:
+  users:
+    - name: k0kubun
+      password: encrypted_password
+      ssh_key: public_key
+
+sakura:
+  users:
+    - name: k0kubun
+      password: encrypted_password
+      ssh_key: public_key
+
+excloud:
+  users:
+    - name: k0kubun
+      password: encrypted_password
+      ssh_key: public_key
+
+shared:
+  rbenv:
+    global:
+      2.1.5
+    versions:
+      - 2.1.5
+    gems:
+      - bundler

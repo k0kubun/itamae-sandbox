@@ -1,4 +1,15 @@
 module RecipeHelper
+  def load_config(name)
+    node.reverse_merge!(node[:shared])
+    node.reverse_merge!(node[name])
+
+    node[:roles].each do |role|
+      node.delete(role)
+    end
+    node.delete(:roles)
+    node.delete(:shared)
+  end
+
   def include_role(name)
     base_dir    = File.expand_path('../../', __FILE__)
     recipe_path = File.join(base_dir, 'roles', name, 'default.rb')
