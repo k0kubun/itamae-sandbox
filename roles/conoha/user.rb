@@ -31,12 +31,12 @@ node[:users].each do |user_info|
   end
 end
 
-template '/etc/sudoers' do
-  source 'templates/sudoers'
-  mode   '440'
-  owner  'root'
-  group  'root'
-end
+# template '/etc/sudoers' do
+#   source 'templates/sudoers'
+#   mode   '440'
+#   owner  'root'
+#   group  'root'
+# end
 
 template '/root/.bash_profile' do
   source 'templates/.bash_profile'

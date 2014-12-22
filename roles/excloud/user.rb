@@ -1,10 +1,3 @@
-template '/etc/sudoers' do
-  source 'templates/sudoers'
-  mode   '440'
-  owner  'root'
-  group  'root'
-end
-
 node[:users].each do |user_info|
   user_name = user_info[:name]
 

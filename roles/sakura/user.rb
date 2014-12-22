@@ -26,10 +26,3 @@ node[:users].each do |user_info|
     mode  '600'
   end
 end
-
-template '/etc/sudoers' do
-  source 'templates/sudoers'
-  mode   '440'
-  owner  'root'
-  group  'root'
-end
