@@ -1,6 +1,6 @@
 load_config 'sakura'
 
-include_recipe 'user.rb'
+include_recipe '../shared/user.rb'
 include_recipe '../shared/sudoers.rb'
 include_recipe '../shared/sshd.rb'
 include_recipe '../shared/iptables.rb'
