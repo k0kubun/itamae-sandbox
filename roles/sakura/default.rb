@@ -7,3 +7,6 @@ include_recipe '../shared/iptables.rb'
 
 include_recipe 'rbenv::system'
 include_recipe '../shared/gem.rb'
+
+include_cookbook 'mysql'
+include_recipe '../shared/mysql.rb'
