@@ -1,3 +1,5 @@
+include_recipe 'rbenv::system'
+
 RBENV_ROOT = '/usr/local/rbenv'
 RBENV_INIT = <<-EOS
   export RBENV_ROOT=#{RBENV_ROOT}

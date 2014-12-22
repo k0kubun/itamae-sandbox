@@ -1,3 +1,5 @@
+include_cookbook 'mysql'
+
 template 'my.cnf' do
   path   '/etc/my.cnf'
   source 'templates/my.cnf'
