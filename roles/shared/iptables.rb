@@ -1,6 +1,6 @@
 template 'iptables' do
   path   '/etc/sysconfig/iptables'
-  source 'templates/iptables'
+  source 'files/iptables'
   mode   '600'
 end
 

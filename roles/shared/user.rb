@@ -27,10 +27,10 @@ node[:users].each do |user_info|
   end
 
   template "/home/#{user_name}/.bashrc" do
-    source 'templates/.bashrc'
+    source 'files/.bashrc'
   end
 end
 
 template '/root/.bash_profile' do
-  source 'templates/.bash_profile'
+  source 'files/.bash_profile'
 end

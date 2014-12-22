@@ -1,6 +1,6 @@
 template 'sshd_config' do
   path   '/etc/ssh/sshd_config'
-  source 'templates/sshd_config'
+  source 'files/sshd_config'
   mode   '600'
 end
 

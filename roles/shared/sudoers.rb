@@ -1,5 +1,5 @@
 template '/etc/sudoers' do
-  source 'templates/sudoers'
+  source 'files/sudoers'
   mode   '440'
   owner  'root'
   group  'root'
