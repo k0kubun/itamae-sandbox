@@ -4,3 +4,7 @@ end
 
 package 'mysql-community-server'
 package 'mysql-community-devel' # to pass bundle install
+
+service 'mysqld' do
+  action [:start, :enable]
+end

@@ -1,1 +1,0 @@
-execute 'echo hello world'
