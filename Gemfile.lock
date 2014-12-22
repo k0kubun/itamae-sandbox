@@ -2,24 +2,47 @@ GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.4.3)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
+    coderay (1.1.0)
+    columnize (0.9.0)
+    debugger-linecache (1.2.0)
     hashie (3.3.2)
     itamae (1.1.0)
       ansi
       hashie
       specinfra (~> 2.1)
       thor
+    method_source (0.8.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (2.0.0)
+      byebug (~> 3.4)
+      pry (~> 0.10)
+    pry-doc (0.6.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
     rake (10.4.2)
+    slop (3.6.0)
     specinfra (2.10.4)
       net-scp
       net-ssh
     thor (0.19.1)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   itamae
+  pry
+  pry-byebug
+  pry-doc
   rake
