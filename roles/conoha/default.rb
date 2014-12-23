@@ -23,13 +23,13 @@ template 'github_ranks/.env' do
   source 'files/.env'
   owner  'k0kubun'
   group  'k0kubun'
-  group  '644'
+  mode   '644'
 end
 
 directory '/home/k0kubun/github_ranks/shared/config' do
   owner  'k0kubun'
   group  'k0kubun'
-  group  '755'
+  mode   '755'
 end
 
 template 'github_ranks/config/secrets.yml' do
@@ -37,7 +37,7 @@ template 'github_ranks/config/secrets.yml' do
   source 'files/secrets.yml'
   owner  'k0kubun'
   group  'k0kubun'
-  group  '644'
+  mode   '644'
 end
 
 git '/home/k0kubun/github_ranks/shared/light_blue' do

@@ -17,11 +17,13 @@ config['roles'].each do |role|
       File.expand_path("../#{path}", __FILE__)
     end
 
-    def itamae_ssh(role, dry_run: false)
+    def itamae_ssh(role, dry_run: false, debug: false)
       args = ['envchain', role] # to pass SUDO_PASSWORD
       args += %w[bundle exec itamae ssh]
       args += %W[--host #{role}]
       args += %W[-y #{expand_path('variables.yml')}]
+      args += %w[--dry-run] if dry_run
+      args += %w[--log-level debug] if debug
       args << expand_path('lib/recipe_helper.rb')
       args << expand_path("roles/#{role}/default.rb")
       system(*args)
@@ -30,13 +32,19 @@ config['roles'].each do |role|
     desc "Apply configurations for #{role}"
     task :apply do
       puts "Building #{role}..."
-      itamae_ssh(role, dry_run: false)
+      itamae_ssh(role)
     end
 
     desc "Test execution for #{role}"
     task :'dry-run' do
       puts "Testing #{role}..."
       itamae_ssh(role, dry_run: true)
+    end
+
+    desc "Apply with logging debug output"
+    task :debug do
+      puts "Debugging #{role}..."
+      itamae_ssh(role, debug: true)
     end
   end
 end
