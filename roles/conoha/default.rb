@@ -45,13 +45,13 @@ git '/home/k0kubun/github_ranks/shared/light_blue' do
 end
 
 # workaround for assets pipeline
-directory '/home/k0kubun/github_ranks/shared/fonts' do
+directory '/home/k0kubun/github_ranks/fonts' do
   owner  'k0kubun'
   group  'k0kubun'
   mode   '755'
 end
 
 # workaround for assets pipeline
-link '/home/k0kubun/github_ranks/shared/fonts/assets' do
+link '/home/k0kubun/github_ranks/fonts/assets' do
   to '/home/k0kubun/github_ranks/current/light_blue/app/assets/fonts/light_blue'
 end
