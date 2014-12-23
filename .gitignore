@@ -1,3 +1,4 @@
 variables.yml
 iptables
 sshd_config
+.env

@@ -18,6 +18,14 @@ template 'nginx.conf' do
   notifies :reload, 'service[nginx]'
 end
 
+template 'github_ranks/.env' do
+  path   '/home/k0kubun/github_ranks/shared/.env'
+  source 'files/.env'
+  owner  'k0kubun'
+  group  'k0kubun'
+  group  '644'
+end
+
 # remote_directory '/home/k0kubun/github_ranks/shared/light_blue' do
 #   source 'light_blue'
 #   owner  'k0kubun'
