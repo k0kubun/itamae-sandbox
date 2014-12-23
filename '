@@ -29,7 +29,7 @@ end
 directory '/home/k0kubun/github_ranks/shared/config' do
   owner  'k0kubun'
   group  'k0kubun'
-  group  '755'
+  group  '644'
 end
 
 template 'github_ranks/config/secrets.yml' do
