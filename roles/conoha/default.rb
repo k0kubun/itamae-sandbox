@@ -17,3 +17,10 @@ template 'nginx.conf' do
   mode   '644'
   notifies :reload, 'service[nginx]'
 end
+
+# remote_directory '/home/k0kubun/github_ranks/shared/light_blue' do
+#   source 'light_blue'
+#   owner  'k0kubun'
+#   group  'k0kubun'
+#   mode   '755'
+# end
