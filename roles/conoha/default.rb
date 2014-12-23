@@ -9,6 +9,8 @@ include_recipe '../shared/mysql.rb'
 include_cookbook 'ruby'
 include_cookbook 'nginx'
 
+package 'htop'
+
 template 'nginx.conf' do
   path   '/etc/nginx/nginx.conf'
   source 'files/nginx.conf'
