@@ -40,9 +40,6 @@ template 'github_ranks/config/secrets.yml' do
   group  '644'
 end
 
-# remote_directory '/home/k0kubun/github_ranks/shared/light_blue' do
-#   source 'light_blue'
-#   owner  'k0kubun'
-#   group  'k0kubun'
-#   mode   '755'
-# end
+git '/home/k0kubun/github_ranks/shared/light_blue' do
+  repository 'git@bitbucket.org:k0kubun/light_blue'
+end
