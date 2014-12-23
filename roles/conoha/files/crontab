@@ -1,3 +1,4 @@
 PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/k0kubun/bin
 
 */1 * * * * /bin/bash -c "cd /home/k0kubun/github_ranks/current && RAILS_ENV=production bundle exec rake github:import_users"
+*/1 * * * * /bin/bash -c "cd /home/k0kubun/github_ranks/current && RAILS_ENV=production bundle exec rake github:import_repos"
