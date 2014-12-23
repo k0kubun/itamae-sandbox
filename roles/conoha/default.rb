@@ -44,14 +44,22 @@ git '/home/k0kubun/github_ranks/shared/light_blue' do
   repository 'git@bitbucket.org:k0kubun/light_blue'
 end
 
-# workaround for assets pipeline
+# workaround for asset pipeline
 directory '/home/k0kubun/github_ranks/fonts' do
   owner  'k0kubun'
   group  'k0kubun'
   mode   '755'
 end
 
-# workaround for assets pipeline
+# workaround for asset pipeline
 link '/home/k0kubun/github_ranks/fonts/assets' do
   to '/home/k0kubun/github_ranks/current/light_blue/app/assets/fonts/light_blue'
+end
+
+remote_file 'crontab' do
+  path   '/var/spool/cron/k0kubun'
+  source 'files/crontab'
+  owner  'k0kubun'
+  group  'wheel'
+  mode   '600'
 end
