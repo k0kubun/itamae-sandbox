@@ -8,6 +8,7 @@ include_recipe '../shared/mysql.rb'
 
 include_cookbook 'ruby'
 include_cookbook 'nginx'
+include_cookbook 'redis'
 
 package 'htop'
 
