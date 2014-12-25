@@ -24,8 +24,11 @@ excloud:
 shared:
   rbenv:
     global:
-      2.1.5
+      2.2.0
     versions:
       - 2.1.5
+      - 2.2.0
     gems:
       - bundler
+  ruby-build:
+    revision: e455975286e44393b1b33037ae1ce40ef2742401

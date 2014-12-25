@@ -15,7 +15,7 @@ GEM
       hashie
       specinfra (~> 2.1)
       thor
-    itamae-plugin-recipe-rbenv (0.0.1)
+    itamae-plugin-recipe-rbenv (0.1.0)
     method_source (0.8.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
