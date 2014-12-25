@@ -1,3 +1,4 @@
+package 'libffi-devel'
 include_recipe 'rbenv::system'
 
 RBENV_ROOT = '/usr/local/rbenv'
