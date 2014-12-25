@@ -30,5 +30,5 @@ proxy:
 
   - path: /
     host: sidekiq.githubranks.com
-    dest: http://internal.githubranks.com:9998/
+    dest: http://localhost:9998/
     strip_path: no
