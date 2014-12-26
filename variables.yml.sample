@@ -1,13 +1,6 @@
 roles:
-  - conoha
   - sakura
   - excloud
-
-conoha:
-  users:
-    - name: k0kubun
-      password: encrypted_password
-      ssh_key: public_key
 
 sakura:
   users:

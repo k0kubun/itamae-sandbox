@@ -13,17 +13,6 @@ $ bundle exec rake sakura
 ```
 
 ## Machines
-### conoha
-
-| Item  | Spec     |
-|:-----|:----------|
-| VPS Vendor | ConoHa |
-| OS | CentOS release 6.5 (Final) |
-| Plan | 930 Yen / Month |
-| Memory | 1GB |
-| CPU | 2 Core |
-| Storage | HDD 100GB |
-
 ### sakura
 
 | Item  | Spec     |
