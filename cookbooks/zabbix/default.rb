@@ -10,6 +10,14 @@ remote_file 'www.conf' do
   mode   '644'
 end
 
+remote_file 'php.ini' do
+  path   '/etc/php.ini'
+  source 'files/php.ini'
+  user   'root'
+  group  'root'
+  mode   '644'
+end
+
 service 'php-fpm' do
   action [:enable, :start]
 end
