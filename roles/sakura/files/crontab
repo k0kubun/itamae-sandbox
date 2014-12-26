@@ -1,5 +1,5 @@
 PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/k0kubun/bin
 
-#*/1 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:import_users"
-#*/30 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:import_repos"
-#*/10 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:schedule_jobs"
+*/1 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:import_users"
+*/30 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:import_repos"
+*/10 * * * * /bin/bash -c "cd /home/k0kubun/githubranks/current && RAILS_ENV=production bundle exec rake github:schedule_jobs"
