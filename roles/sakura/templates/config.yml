@@ -1,0 +1,29 @@
+# address to bind
+address: :9999
+
+auth:
+  session:
+    # authentication key for cookie store
+    key: <%= node[:gate][:cookie_secret] %>
+
+  info:
+    # oauth2 provider name (`google` or `github`)
+    service: google
+    # your app keys for the service
+    client_id: <%= node[:gate][:client_id] %>
+    client_secret: <%= node[:gate][:client_secret] %>
+    # your app redirect_url for the service: if the service is Google, path is always "/oauth2callback"
+    redirect_url: http://zabbix.githubranks.com/oauth2callback
+
+restrictions:
+  - takashikkbn@gmail.com
+
+# document root for static files
+htdocs: ./
+
+# proxy definitions
+proxy:
+  - path: /
+    host: zabbix.githubranks.com
+    dest: http://localhost:9998/
+    strip_path: no
