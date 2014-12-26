@@ -10,6 +10,7 @@ include_cookbook 'ruby'
 include_cookbook 'nginx'
 include_cookbook 'redis'
 include_cookbook 'zabbix'
+include_cookbook 'gate'
 
 include_recipe 'githubranks.rb'
 
