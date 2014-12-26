@@ -9,6 +9,7 @@ include_recipe '../shared/mysql.rb'
 include_cookbook 'ruby'
 include_cookbook 'nginx'
 include_cookbook 'redis'
+include_cookbook 'zabbix'
 
 include_recipe 'githubranks.rb'
 
