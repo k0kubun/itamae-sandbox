@@ -18,11 +18,11 @@ $ bundle exec rake sakura
 | Item  | Spec     |
 |:-----|:----------|
 | VPS Vendor | Sakura Internet |
-| OS | CentOS release 6.5 (Final) |
-| Plan | 900 Yen / Month |
+| OS | CentOS release 6.6 (Final) |
+| Plan | 972 Yen / Month |
 | Memory | 1GB |
 | CPU | 2 Core |
-| Storage | HDD 100GB |
+| Storage | SSD 30GB |
 
 ### excloud
 
