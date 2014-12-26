@@ -1,9 +1,9 @@
 package 'supervisor'
 
-service "supervisord" do
+service 'supervisord' do
   action [:enable, :start]
 end
 
-execute "service supervisord restart" do
+execute 'service supervisord restart' do
   action :nothing
 end
