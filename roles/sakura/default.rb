@@ -11,10 +11,11 @@ include_cookbook 'nginx'
 include_cookbook 'redis'
 include_cookbook 'zabbix'
 include_cookbook 'gate'
+include_cookbook 'supervisord'
 
 include_recipe 'githubranks.rb'
 
-template 'nginx.conf' do
+remote_file 'nginx.conf' do
   path   '/etc/nginx/nginx.conf'
   source 'files/nginx.conf'
   owner  'root'
@@ -29,4 +30,20 @@ remote_file 'crontab' do
   owner  'k0kubun'
   group  'wheel'
   mode   '600'
+end
+
+remote_file '/etc/supervisord.conf' do
+  source 'files/supervisord.conf'
+  owner  'k0kubun'
+  group  'k0kubun'
+  mode   '644'
+  notifies :run, 'execute[service supervisord restart]'
+end
+
+template '/etc/gate.yml' do
+  source 'templates/gate.yml'
+  owner  'k0kubun'
+  group  'k0kubun'
+  mode   '644'
+  notifies :run, 'execute[service supervisord restart]'
 end
