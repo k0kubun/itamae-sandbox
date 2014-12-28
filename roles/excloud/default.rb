@@ -21,6 +21,13 @@ include_cookbook 'supervisord'
 
 include_recipe 'githubranks.rb'
 
+remote_file '/home/k0kubun/batch/env.sh' do
+  source 'files/env.sh'
+  owner  'k0kubun'
+  group  'k0kubun'
+  mode   '755'
+end
+
 remote_file '/etc/supervisord.conf' do
   source 'files/supervisord.conf'
   owner  'k0kubun'
