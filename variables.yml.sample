@@ -23,6 +23,7 @@ shared:
       - 2.2.0
     gems:
       - bundler
+
   gate:
     cookie_secret: secret
     client_id: aaaa
