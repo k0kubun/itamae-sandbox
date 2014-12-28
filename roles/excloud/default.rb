@@ -4,3 +4,18 @@ load_config 'excloud'
 # include_recipe 'user.rb'
 # include_recipe '../shared/iptables.rb'
 # include_recipe '../shared/sshd.rb'
+include_recipe '../shared/mysql.rb'
+
+# execute 'rpm -ivh http://ftp.jaist.ac.jp/pub/Linux/Fedora/epel/5/x86_64/epel-release-5-4.noarch.rpm'
+# package 'git'
+package 'htop'
+
+# service 'httpd' do
+#   action [:stop, :disable]
+# end
+
+include_cookbook 'ruby'
+include_cookbook 'nginx'
+include_cookbook 'redis'
+
+include_recipe 'githubranks.rb'
