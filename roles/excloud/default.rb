@@ -35,3 +35,12 @@ remote_file '/etc/supervisord.conf' do
   mode   '644'
   notifies :run, 'execute[service supervisord restart]'
 end
+
+remote_file 'nginx.conf' do
+  path   '/etc/nginx/nginx.conf'
+  source 'files/nginx.conf'
+  owner  'root'
+  group  'root'
+  mode   '644'
+  notifies :reload, 'service[nginx]'
+end
