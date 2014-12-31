@@ -17,17 +17,17 @@ include_recipe '../shared/mysql.rb'
 include_cookbook 'ruby'
 include_cookbook 'nginx'
 include_cookbook 'redis'
-# include_cookbook 'supervisord'
+include_cookbook 'supervisord'
 
 include_recipe 'githubranks.rb'
 
-# remote_file '/etc/supervisord.conf' do
-#   source 'files/supervisord.conf'
-#   owner  'k0kubun'
-#   group  'k0kubun'
-#   mode   '644'
-#   notifies :run, 'execute[service supervisord restart]'
-# end
+remote_file '/etc/supervisord.conf' do
+  source 'files/supervisord.conf'
+  owner  'k0kubun'
+  group  'k0kubun'
+  mode   '644'
+  notifies :run, 'execute[service supervisord restart]'
+end
 
 remote_file 'nginx.conf' do
   path   '/etc/nginx/nginx.conf'
