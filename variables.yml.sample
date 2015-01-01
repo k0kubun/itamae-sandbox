@@ -1,12 +1,5 @@
 roles:
-  - sakura
   - excloud
-
-sakura:
-  users:
-    - name: k0kubun
-      password: encrypted_password
-      ssh_key: public_key
 
 excloud:
   users:
@@ -23,8 +16,3 @@ shared:
       - 2.2.0
     gems:
       - bundler
-
-  gate:
-    cookie_secret: secret
-    client_id: aaaa
-    client_secret: bbbb
