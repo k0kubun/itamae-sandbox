@@ -29,3 +29,10 @@ remote_file 'nginx.conf' do
   mode   '644'
   notifies :reload, 'service[nginx]'
 end
+
+remote_directory '/home/k0kubun/public_html' do
+  source 'files/public_html'
+  owner 'k0kubun'
+  group 'k0kubun'
+  mode '755'
+end
