@@ -28,6 +28,9 @@ node[:users].each do |user_info|
 
   template "/home/#{user_name}/.bashrc" do
     source 'files/.bashrc'
+    owner user_name
+    group user_name
+    mode  '644'
   end
 end
 

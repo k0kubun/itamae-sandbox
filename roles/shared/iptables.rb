@@ -4,7 +4,7 @@ template 'iptables' do
   mode   '600'
 end
 
-execute '/sbin/service iptables restart' do
+service 'iptables' do
   action :nothing
-  subscribes :run, 'template[iptables]'
+  subscribes :restart, 'template[iptables]'
 end

@@ -4,7 +4,7 @@ template 'sshd_config' do
   mode   '600'
 end
 
-execute '/sbin/service sshd restart' do
+service 'sshd' do
   action :nothing
-  subscribes :run, 'template[iptables]'
+  subscribes :restart, 'template[sshd_config]'
 end
