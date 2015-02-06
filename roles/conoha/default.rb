@@ -12,6 +12,8 @@ include_cookbook 'nginx'
 
 # package 'java-1.6.0-openjdk-devel.x86_64'
 
+include_recipe 'githubranks.rb'
+
 remote_file 'nginx.conf' do
   path   '/etc/nginx/nginx.conf'
   source 'files/nginx.conf'

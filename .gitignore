@@ -3,3 +3,4 @@ iptables
 sshd_config
 .env
 secrets.yml
+database.yml
